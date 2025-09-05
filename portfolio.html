@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mon Portfolio Personnel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f0f8ff;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #004466;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #004466;
+    }
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+    .projet:hover {
+      background-color: #d9eaff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Bienvenue sur mon Portfolio</h1>
+  <nav>
+    <a onclick="showSection('accueil')">Accueil</a>
+    <a onclick="showSection('apropos')">À propos</a>
+    <a onclick="showSection('projets')">Projets</a>
+  </nav>
+</header>
+
+<section id="accueil" class="active">
+  <h2>Accueil</h2>
+  <p>Bonjour ! Je m'appelle Bintou DEMBELE, passionnée Passionnée par les domaines de l’énergie et du numérique. Voici mon portfolio où vous pourrez découvrir mes compétences et mes projets.</p>
+</section>
+
+<section id="apropos">
+  <h2>À propos</h2>
+  <p>Je suis une passionnée du domaine énergétique et numérique. J'aime découvrir de nouvelles technologies et contribuer à des solutions innovantes et efficaces.</p>
+  <p> :</p>
+  <ul>
+    <li>Connaissance des énergies renouvelables et systèmes électriques</li>
+    <li>Utilisation de logiciels de simulation et d’analyse énergétique</li>
+    <li>Bonne capacité d’adaptation, travail en équipe et Forte motivation à apprendre et à innover</li>
+  </ul>
+</section>
+
+<section id="projets">
+  <h2>Projets</h2>
+  <ul>
+    <li class="projet" onclick="alert('Projet 1: Installation et optimisation d’un système solaire photovoltaïque
+(Description : Étude, dimensionnement et mise en place d’un système solaire pour alimenter un bâtiment.)')">Projet 1 : Installation et optimisation d’un système solaire photovoltaïque</li>
+    <li class="projet" onclick="alert('Projet 2: Automatisation de la gestion énergétique d’un bâtiment
+(Description : Mise en place d’un système automatisé pour contrôler la consommation électrique et améliorer l’efficacité énergétique.)')">Projet 2 : Automatisation de la gestion énergétique d’un bâtiment</li>
+    <li class="projet" onclick="alert('Projet 3: Analyse des données de consommation énergétique
+(Description : Collecte et traitement des données de consommation pour identifier des économies possibles, en utilisant des outils de visualisation et d’analyse.)')">Projet 3 : Analyse des données de consommation énergétique</li>
+  </ul>
+</section>
+
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
